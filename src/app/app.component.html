@@ -1,0 +1,63 @@
+<!-- <section style="border: 2px solid #999; margin: 20px; padding: 20px;">
+  <h1>ngIf example</h1>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"
+    [ngClass]="{disabled : currentPage===0}">
+      <a href="#" class="page-link" (click)="currentPage=currentPage-1">Prev</a>
+    </li>    
+    <ng-container *ngFor="let image of images; let i=index">
+      <li class="page-item" 
+      [ngClass]="{active: i === currentPage}"
+      *ngIf="checkWindowIndex(i)">
+      <a (click)="currentPage=i" class="page-link" href="#">{{i+1}}</a>
+    </li> 
+    </ng-container>
+    <li class="page-item"
+    [ngClass]="{disabled : currentPage === images.length - 1}">
+      <a href="#" class="page-link" (click)="currentPage = currentPage+1">Next</a>
+    </li> 
+  </ul> 
+</nav>
+<div>
+  <h4>{{images[currentPage].title}}</h4>
+  <img class="img-fluid" [src]="images[currentPage].url" alt="">
+</div>
+</section> -->
+
+<!-- <section style="border: 2px solid #999; margin: 20px; padding: 20px;">
+  <h1>ngSwitchCase example </h1>
+  <nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"
+    [ngClass]="{disabled : currentPage===0}">
+      <a href="#" class="page-link" (click)="currentPage=currentPage-1">Prev</a>
+    </li>    
+    <ng-container *ngFor="let image of images; let i=index">
+      <li class="page-item" 
+      [ngClass]="{active: i === currentPage}"
+      *ngIf="checkWindowIndex(i)">
+      <a (click)="currentPage=i" class="page-link" href="#">{{i+1}}</a>
+    </li> 
+    </ng-container>
+    <li class="page-item"
+    [ngClass]="{disabled : currentPage === images.length - 1}">
+      <a href="#" class="page-link" (click)="currentPage = currentPage+1">Next</a>
+    </li> 
+  </ul> 
+</nav>
+  <h2 style="margin-top: 60px;">Below is Switch case</h2>
+  <div [ngSwitch]="currentPage">
+    <div *ngSwitchCase="0">current page is zero</div>
+    <div *ngSwitchCase="2">current page is two</div>
+    <div *ngSwitchCase="3">current page is four</div>
+    <div *ngSwitchDefault>unknown current page</div>
+  </div>
+</section> -->
+
+<section style="border: 2px solid #999; margin: 20px; padding: 20px;">
+  <h1>Custom Directives Example</h1><div>  
+  <h4 [appClass]="'orange'">{{images[currentPage].title}}</h4>
+  <img class="img-fluid" [src]="images[currentPage].url" alt="">
+</div>
+</section>
